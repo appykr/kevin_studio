@@ -1,0 +1,403 @@
+/* ========================================
+   KEVIN'S TATTOO STUDIO — Responsive
+   Mobile-first breakpoints
+   ======================================== */
+
+/* === Tablet (max-width: 1024px) === */
+@media (max-width: 1024px) {
+    :root {
+        --section-padding: 80px 0;
+    }
+
+    .about-grid {
+        gap: 48px;
+    }
+
+    .about-image-wrapper img {
+        height: 400px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .gallery-grid {
+        gap: 12px;
+    }
+}
+
+/* === Tablet portrait (max-width: 768px) === */
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 64px 0;
+    }
+
+    /* Navigation */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        transition: right var(--transition-base);
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-link {
+        font-size: 18px;
+        padding: 16px 24px;
+        letter-spacing: 3px;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .nav-cta {
+        margin-top: 16px;
+        padding: 14px 36px;
+        font-size: 14px;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-tagline {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    .hero-scroll-indicator {
+        bottom: 24px;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .gallery-item-wide {
+        grid-column: span 2;
+    }
+
+    .gallery-item-tall {
+        grid-row: span 1;
+        aspect-ratio: 1;
+    }
+
+    .gallery-filters {
+        gap: 6px;
+        margin-bottom: 32px;
+    }
+
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 11px;
+    }
+
+    .gallery-overlay {
+        opacity: 1;
+        background: linear-gradient(
+            to top,
+            rgba(10, 10, 10, 0.8) 0%,
+            transparent 50%
+        );
+    }
+
+    .gallery-overlay h3 {
+        font-size: 16px;
+    }
+
+    .gallery-zoom {
+        display: none;
+    }
+
+    /* About */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .about-image-wrapper img {
+        height: 350px;
+    }
+
+    .about-image-border {
+        top: 12px;
+        left: 12px;
+        right: -12px;
+        bottom: -12px;
+    }
+
+    .about-experience-badge {
+        right: -8px;
+        bottom: -12px;
+        padding: 20px;
+    }
+
+    .experience-number {
+        font-size: 28px;
+    }
+
+    .about-stats {
+        gap: 24px;
+    }
+
+    .stat-number {
+        font-size: 28px;
+    }
+
+    .about-content .section-title {
+        text-align: center;
+    }
+
+    .section-divider-left {
+        margin: 0 auto 24px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-stats {
+        justify-content: center;
+    }
+
+    .about-specialties {
+        text-align: center;
+    }
+
+    .specialty-tags {
+        justify-content: center;
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+        padding: 32px 24px;
+    }
+
+    .testimonial-text {
+        font-size: 16px;
+    }
+
+    /* Social Grid */
+    .social-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3px;
+    }
+
+    /* Contact */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info-card {
+        padding: 24px;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .newsletter-form {
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    /* Lightbox */
+    .lightbox-prev,
+    .lightbox-next {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .lightbox-prev { left: 12px; }
+    .lightbox-next { right: 12px; }
+
+    .lightbox-close {
+        top: 16px;
+        right: 16px;
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+}
+
+/* === Mobile (max-width: 480px) === */
+@media (max-width: 480px) {
+    :root {
+        --section-padding: 48px 0;
+        --container-padding: 0 16px;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    /* Hero */
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-title-accent {
+        font-size: 22px;
+    }
+
+    .hero-subtitle {
+        font-size: 11px;
+        letter-spacing: 4px;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+
+    .gallery-overlay {
+        padding: 12px;
+    }
+
+    .gallery-category {
+        font-size: 9px;
+    }
+
+    .gallery-overlay h3 {
+        font-size: 13px;
+    }
+
+    /* About */
+    .about-image-wrapper img {
+        height: 280px;
+    }
+
+    .about-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Social */
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .social-links {
+        gap: 12px;
+    }
+
+    .social-link-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+        padding: 24px 16px;
+    }
+
+    .testimonial-text {
+        font-size: 14px;
+    }
+
+    .testimonial-avatar {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* Contact */
+    .contact-info-card {
+        padding: 20px;
+    }
+
+    .info-item {
+        gap: 14px;
+        padding: 16px 0;
+    }
+
+    .info-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 48px 0 0;
+    }
+
+    .footer-grid {
+        gap: 28px;
+    }
+}
+
+/* === Large Desktop (min-width: 1440px) === */
+@media (min-width: 1440px) {
+    :root {
+        --container-width: 1320px;
+    }
+
+    .hero-title {
+        font-size: 100px;
+    }
+
+    .hero-title-accent {
+        font-size: 60px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

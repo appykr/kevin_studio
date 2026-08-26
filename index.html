@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin's Tattoo Studio | Custom Tattoo Art</title>
+    <meta name="description" content="Kevin's Tattoo Studio — Premium custom tattoo art. Specializing in traditional, realism, blackwork, and Japanese styles. Book your appointment today.">
+    <meta name="keywords" content="tattoo, tattoo artist, custom tattoo, tattoo studio, body art, ink">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kevin's Tattoo Studio | Custom Tattoo Art">
+    <meta property="og:description" content="Premium custom tattoo art. Specializing in traditional, realism, blackwork, and Japanese styles.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- AOS - Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">KEVIN'S</span>
+                <span class="logo-accent">TATTOO</span>
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Book Now</a></li>
+            </ul>
+            
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <header class="hero" id="home">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=1920&q=80&fit=crop" 
+                 alt="Tattoo artist at work" class="hero-bg-img" loading="eager">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+            <p class="hero-subtitle">Est. 2015 &mdash; Custom Ink Art</p>
+            <h1 class="hero-title">
+                <span>KEVIN'S</span>
+                <span class="hero-title-accent">TATTOO STUDIO</span>
+            </h1>
+            <p class="hero-tagline">Where art meets skin. Every piece tells a story.</p>
+            <div class="hero-buttons">
+                <a href="#gallery" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Book a Session</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- ========== GALLERY / PORTFOLIO ========== -->
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-label">Portfolio</p>
+                <h2 class="section-title">My Work</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">Each tattoo is a unique piece of art, crafted with precision and passion. Browse through my recent work across various styles.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="gallery-filters" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="traditional">Traditional</button>
+                <button class="filter-btn" data-filter="realism">Realism</button>
+                <button class="filter-btn" data-filter="blackwork">Blackwork</button>
+                <button class="filter-btn" data-filter="japanese">Japanese</button>
+                <button class="filter-btn" data-filter="geometric">Geometric</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Row 1 -->
+                <div class="gallery-item" data-category="blackwork" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1590246814883-57c511e76bfe?w=600&q=80&fit=crop" 
+                         alt="Blackwork tattoo design" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Blackwork</span>
+                        <h3>Dark Elegance</h3>
+                        <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+
+                <div class="gallery-item gallery-item-tall" data-category="realism" data-aos="fade-up" data-aos-delay="150">
+                    <img src="https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=600&q=80&fit=crop" 
+                         alt="Realistic portrait tattoo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Realism</span>
+                        <h3>Portrait Study</h3>
+                        <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="traditional" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1542856204-00101eb6571c?w=600&q=80&fit=crop" 
+                         alt="Traditional style tattoo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Traditional</span>
+                        <h3>Classic Americana</h3>
+                        <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+
+                <div class="gallery-item gallery-item-wide" data-category="japanese" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?w=800&q=80&fit=crop" 
+                         alt="Japanese style tattoo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Japanese</span>
+                        <h3>Rising Dragon</h3>
+                        <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="geometric" data-aos="fade-up" data-aos-delay="150">
+                    <img src="https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=600&q=80&fit=crop" 
+                         alt="Geometric tattoo pattern" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Geometric</span>
+                        <h3>Sacred Geometry</h3>
+                        <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="blackwork" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1562962230-16e4623d36e6?w=600&q=80&fit=crop" 
+                         alt="Blackwork sleeve tattoo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Blackwork</span>
+                        <h3>Shadow Work</h3>
+                        <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+
+                <div class="gallery-item gallery-item-tall" data-category="traditional" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1581783898377-1c85bf937427?w=600&q=80&fit=crop" 
+                         alt="Traditional tattoo art" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Traditional</span>
+                        <h3>Heritage Ink</h3>
+                        <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="realism" data-aos="fade-up" data-aos-delay="150">
+                    <img src="https://images.unsplash.com/photo-1475403614135-5f1aa0eb8c4f?w=600&q=80&fit=crop" 
+                         alt="Realistic tattoo artwork" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Realism</span>
+                        <h3>Hyper Detail</h3>
+                        <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="geometric" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1604941884618-3c7a2aed7f30?w=600&q=80&fit=crop" 
+                         alt="Geometric line tattoo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Geometric</span>
+                        <h3>Line & Form</h3>
+                        <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+
+                <div class="gallery-item gallery-item-wide" data-category="japanese" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=800&q=80&fit=crop" 
+                         alt="Japanese tattoo sleeve" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Japanese</span>
+                        <h3>Koi Journey</h3>
+                        <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="realism" data-aos="fade-up" data-aos-delay="150">
+                    <img src="https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?w=600&q=80&fit=crop" 
+                         alt="Realistic nature tattoo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Realism</span>
+                        <h3>Nature's Call</h3>
+                        <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="blackwork" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1569389397653-c04fe624e663?w=600&q=80&fit=crop" 
+                         alt="Blackwork mandala tattoo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Blackwork</span>
+                        <h3>Mandala Flow</h3>
+                        <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?w=700&q=80&fit=crop" 
+                             alt="Kevin - Tattoo Artist" loading="lazy">
+                        <div class="about-image-border"></div>
+                    </div>
+                    <div class="about-experience-badge">
+                        <span class="experience-number">10+</span>
+                        <span class="experience-text">Years of<br>Experience</span>
+                    </div>
+                </div>
+                
+                <div class="about-content" data-aos="fade-left" data-aos-duration="1000">
+                    <p class="section-label">About Me</p>
+                    <h2 class="section-title">The Artist Behind<br>the Needle</h2>
+                    <div class="section-divider section-divider-left"></div>
+                    
+                    <p class="about-text">
+                        With over a decade of experience in the art of tattooing, I've dedicated my life to transforming ideas into permanent works of art. Every piece I create is a collaboration between artist and canvas — your story, my craft.
+                    </p>
+                    <p class="about-text">
+                        My journey began in the traditional tattoo world, but I've since expanded my repertoire to include realism, blackwork, Japanese, and geometric styles. I believe that a great tattoo isn't just about technical skill — it's about understanding the person wearing it.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="2500">0</span>
+                            <span class="stat-number-plus">+</span>
+                            <span class="stat-label">Tattoos Done</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="1800">0</span>
+                            <span class="stat-number-plus">+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="15">0</span>
+                            <span class="stat-number-plus">+</span>
+                            <span class="stat-label">Awards Won</span>
+                        </div>
+                    </div>
+                    
+                    <div class="about-specialties">
+                        <h3>Specialties</h3>
+                        <div class="specialty-tags">
+                            <span class="tag">Traditional</span>
+                            <span class="tag">Realism</span>
+                            <span class="tag">Blackwork</span>
+                            <span class="tag">Japanese</span>
+                            <span class="tag">Geometric</span>
+                            <span class="tag">Cover-ups</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS SECTION ========== -->
+    <section class="section testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-label">Testimonials</p>
+                <h2 class="section-title">What Clients Say</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="testimonials-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Kevin transformed my vision into something beyond what I imagined. The attention to detail in my sleeve is absolutely incredible. Every session was comfortable and professional."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&q=80&fit=crop&crop=face" alt="James R." class="testimonial-avatar">
+                            <div>
+                                <h4>James R.</h4>
+                                <span>Full Sleeve — Realism</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"First tattoo experience and Kevin made it so easy. He took the time to explain everything and the result is stunning. The studio is clean, welcoming, and the vibe is perfect."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&q=80&fit=crop&crop=face" alt="Sarah M." class="testimonial-avatar">
+                            <div>
+                                <h4>Sarah M.</h4>
+                                <span>Geometric Piece</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"I've been tattooed by artists all over the country, and Kevin is hands-down one of the best. His Japanese work is on another level. Already planning my next piece with him."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&q=80&fit=crop&crop=face" alt="Mike T." class="testimonial-avatar">
+                            <div>
+                                <h4>Mike T.</h4>
+                                <span>Japanese Back Piece</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Kevin covered up an old tattoo I've hated for years and turned it into something I'm proud to show off. True artist who listens to what you want and delivers beyond expectations."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&q=80&fit=crop&crop=face" alt="Lisa K." class="testimonial-avatar">
+                            <div>
+                                <h4>Lisa K.</h4>
+                                <span>Cover-up Transformation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The blackwork Kevin did for me is absolutely flawless. Clean lines, perfect shading, and incredible attention to symmetry. This man is a perfectionist in the best way possible."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&q=80&fit=crop&crop=face" alt="David P." class="testimonial-avatar">
+                            <div>
+                                <h4>David P.</h4>
+                                <span>Blackwork Chest Piece</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Navigation -->
+                <div class="testimonial-nav">
+                    <button class="testimonial-btn testimonial-prev" aria-label="Previous testimonial">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="testimonial-dots" id="testimonialDots"></div>
+                    <button class="testimonial-btn testimonial-next" aria-label="Next testimonial">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SOCIAL / INSTAGRAM FEED ========== -->
+    <section class="section social-section" id="social">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-label">Follow Along</p>
+                <h2 class="section-title">@kevins.tattoo</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="social-grid" data-aos="fade-up" data-aos-delay="100">
+                <a href="#" class="social-grid-item">
+                    <img src="https://images.unsplash.com/photo-1590246814883-57c511e76bfe?w=400&q=80&fit=crop" alt="Instagram post" loading="lazy">
+                    <div class="social-grid-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="#" class="social-grid-item">
+                    <img src="https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=400&q=80&fit=crop" alt="Instagram post" loading="lazy">
+                    <div class="social-grid-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="#" class="social-grid-item">
+                    <img src="https://images.unsplash.com/photo-1562962230-16e4623d36e6?w=400&q=80&fit=crop" alt="Instagram post" loading="lazy">
+                    <div class="social-grid-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="#" class="social-grid-item">
+                    <img src="https://images.unsplash.com/photo-1604941884618-3c7a2aed7f30?w=400&q=80&fit=crop" alt="Instagram post" loading="lazy">
+                    <div class="social-grid-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="#" class="social-grid-item">
+                    <img src="https://images.unsplash.com/photo-1475403614135-5f1aa0eb8c4f?w=400&q=80&fit=crop" alt="Instagram post" loading="lazy">
+                    <div class="social-grid-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="#" class="social-grid-item">
+                    <img src="https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?w=400&q=80&fit=crop" alt="Instagram post" loading="lazy">
+                    <div class="social-grid-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="social-links" data-aos="fade-up" data-aos-delay="200">
+                <a href="#" class="social-link-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="social-link-btn" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-label">Get in Touch</p>
+                <h2 class="section-title">Book Your Session</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">Ready to bring your vision to life? Fill out the form below and I'll get back to you within 24 hours to discuss your piece.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper" data-aos="fade-right">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                            </div>
+                            <div class="form-group">
+                                <label for="style">Tattoo Style</label>
+                                <select id="style" name="style">
+                                    <option value="">Select a style</option>
+                                    <option value="traditional">Traditional</option>
+                                    <option value="realism">Realism</option>
+                                    <option value="blackwork">Blackwork</option>
+                                    <option value="japanese">Japanese</option>
+                                    <option value="geometric">Geometric</option>
+                                    <option value="coverup">Cover-up</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Tell Me About Your Tattoo *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Describe your tattoo idea, placement, size, and any reference images you have..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Request</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info" data-aos="fade-left">
+                    <div class="contact-info-card">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Studio Location</h4>
+                                <p>123 Ink Street, Suite 4<br>Los Angeles, CA 90012</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Tuesday — Saturday<br>11:00 AM — 8:00 PM</p>
+                                <p class="info-note">Closed Sunday & Monday</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+15551234567">(555) 123-4567</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:info@kevinstattoo.com">info@kevinstattoo.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder -->
+                    <div class="map-placeholder">
+                        <div class="map-overlay">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Interactive map coming soon</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="nav-logo">
+                        <span class="logo-text">KEVIN'S</span>
+                        <span class="logo-accent">TATTOO</span>
+                    </a>
+                    <p class="footer-tagline">Where art meets skin. Premium custom tattoo art since 2015.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#gallery">Custom Tattoos</a></li>
+                        <li><a href="#gallery">Cover-ups</a></li>
+                        <li><a href="#gallery">Touch-ups</a></li>
+                        <li><a href="#contact">Consultations</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Get notified about flash sales, open spots, and new designs.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" aria-label="Email for newsletter">
+                        <button type="submit" aria-label="Subscribe"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kevin's Tattoo Studio. All rights reserved.</p>
+                <p class="footer-credit">Photos from <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== LIGHTBOX MODAL ========== -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox"><i class="fas fa-times"></i></button>
+        <button class="lightbox-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImage">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/testimonials.js"></script>
+</body>
+</html>

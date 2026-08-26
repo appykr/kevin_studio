@@ -1,0 +1,195 @@
+/* ========================================
+   KEVIN'S TATTOO STUDIO — Animations
+   Custom keyframes & transitions
+   ======================================== */
+
+/* === Fade Animations === */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* === Scale Animations === */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(201, 169, 110, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(201, 169, 110, 0.4);
+    }
+}
+
+/* === Loading / Shimmer === */
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* === Parallax float === */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* === Gallery filter animation === */
+.gallery-item {
+    animation: scaleIn 0.4s ease forwards;
+}
+
+.gallery-item.filtering-out {
+    animation: filterOut 0.3s ease forwards;
+}
+
+.gallery-item.filtering-in {
+    animation: filterIn 0.4s ease forwards;
+}
+
+@keyframes filterOut {
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+@keyframes filterIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* === Stat counter glow === */
+.stat-number.counted {
+    animation: pulseGlow 2s ease-in-out;
+}
+
+/* === Navigation link hover line === */
+@keyframes expandLine {
+    from { width: 0; }
+    to { width: 60%; }
+}
+
+/* === Hero content entrance === */
+.hero-content {
+    animation: fadeInUp 1.2s ease 0.3s both;
+}
+
+.hero-scroll-indicator {
+    animation: fadeIn 1s ease 1.5s both;
+}
+
+/* === Button hover ripple === */
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover::before {
+    transform: scale(1);
+}
+
+/* === Lightbox entrance === */
+.lightbox.active .lightbox-content {
+    animation: scaleIn 0.3s ease;
+}
+
+/* === Image loading placeholder === */
+.gallery-item img,
+.social-grid-item img {
+    background: linear-gradient(90deg, var(--bg-tertiary) 25%, var(--bg-card) 50%, var(--bg-tertiary) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+/* === Reduced motion === */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .hero-bg-img {
+        transform: none !important;
+    }
+}
